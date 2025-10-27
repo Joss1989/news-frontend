@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Quicksand } from "next/font/google"
+
+const quicksand = Quicksand ({
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "News",
@@ -13,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="da">
-      <body>{children}</body>
+      <body className={quicksand.className}>{children}</body>
     </html>
   );
 }
