@@ -17,16 +17,18 @@ const Navbar = () => {
     {label: "Vejr", href: ""},
     {label: "Podcast", href: ""},
   ]
-  
+
   return (
     <header className="w-full bg-black items-center md:flex z-50 mb-20">
       <nav className="flex justify-between items-center w-full px-5 text-white">
-        <Link 
-          href="/"
-          className="text-[4.063rem]"
-        >
-          ..news
-        </Link>
+        <h1>
+          <Link
+            href="/"
+            className="text-[4.063rem]"
+          >
+            ..news
+          </Link>
+        </h1>
         
         {/* Desktopmenu — skjult på mobil (hidden), vises fra md og op */}
         <ul className="hidden md:flex space-x-5">

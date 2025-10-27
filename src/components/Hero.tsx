@@ -5,7 +5,7 @@ const Hero = async () => {
 
   return (
     <section className="max-w-[1000px] mx-auto pb-20">
-      <h1 className="text-5xl mb-4">Ny grøn energiplan sat i værk</h1>
+      <h2 className="text-5xl mb-4">Ny grøn energiplan sat i værk</h2>
       <p className="text-[#e89700] mb-2 ">Nyheder</p>
       <div className="grid grid-cols-2 gap-x-6 gap-y-20">
         {nyheder.slice(0, 1).map((item, index) => (
