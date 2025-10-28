@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <header className="w-full bg-black items-center md:flex z-50 h-20">
       <nav className="flex justify-between items-center w-full px-5 text-white">
-        <h1 className="text-5xl">
+        <h1 className="text-4xl">
           <Link
             href="/"
           >
@@ -48,7 +48,7 @@ const Navbar = () => {
 
         <Link
           href="/login"
-          className="hidden md:block text-4xl"
+          className="hidden md:block text-3xl"
         >
           Login
         </Link>

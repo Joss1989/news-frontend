@@ -12,7 +12,7 @@ const Article3 = ({ item }: ArticleProps) => {
           alt={item.content[2].altText}
           className="w-full h-full object-cover"
         />
-        <p className="leading-5 absolute bottom-0 inset-x-0 bg-black text-white p-6">
+        <p className="leading-5 absolute bottom-0 inset-x-0 bg-black text-white py-3 px-4">
           {item.content[0].text}
         </p>
       </figure>

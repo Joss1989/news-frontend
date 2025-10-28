@@ -3,6 +3,7 @@ import { Nyheder } from "@/data/articleData";
 interface ArticleProps {
   item: Nyheder;
 }
+
 const Article1 = ({ item }: ArticleProps) => {
   return (
     <>
