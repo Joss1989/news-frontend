@@ -8,7 +8,7 @@
   }
 
   h2 {
-    font-size: 3rem;
+    @apply text-2xl font-semibold
   }
 
   .nyheder {

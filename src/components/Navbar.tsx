@@ -19,12 +19,11 @@ const Navbar = () => {
   ]
 
   return (
-    <header className="w-full bg-black items-center md:flex z-50 mb-20">
+    <header className="w-full bg-black items-center md:flex z-50 h-20">
       <nav className="flex justify-between items-center w-full px-5 text-white">
-        <h1>
+        <h1 className="text-5xl">
           <Link
             href="/"
-            className="text-[4.063rem]"
           >
             ..news
           </Link>
@@ -35,7 +34,6 @@ const Navbar = () => {
           {menuItems.map((item,index // Gennemløber alle menuItems og laver et listeelement pr. punkt
             ) => (
               <li key={index}>
-                {" "}
                 {/* Unik key (krav fra React) */}
                 <Link
                   href={item.href} // Link til side eller sektion
@@ -50,7 +48,7 @@ const Navbar = () => {
 
         <Link
           href="/login"
-          className="hidden md:block"
+          className="hidden md:block text-4xl"
         >
           Login
         </Link>

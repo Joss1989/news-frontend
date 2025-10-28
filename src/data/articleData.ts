@@ -40,3 +40,9 @@ export async function getArticles(): Promise<Nyheder[]> {
   return res.json();
 }
 
+// Hent alle articler (READ)
+export async function getIsLandinPage(): Promise<Nyheder[]> {
+  const res = await fetch(`${API_URL}/landingpage`);
+  if (!res.ok) throw new Error("Failed to fetch treatments");
+  return res.json();
+}
