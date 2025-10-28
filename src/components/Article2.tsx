@@ -8,7 +8,7 @@ const Article2 = ({ items }: ArticleProps) => {
   return (
     <section className=" grid grid-rows-2 col-span-4 pt-10 md:pt-0 md:col-span-2 gap-5 h-full">
       {items.map((item) => (
-        <article key={item._id} className="grid grid-cols-1 md:grid-cols-2 gap-x-2 h-full">
+        <article key={item._id} className="grid grid-cols-2 gap-x-2 h-full ">
           <div className="flex flex-col">
             <h3>
               <strong>{item.title}</strong>
