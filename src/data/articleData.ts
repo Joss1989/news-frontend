@@ -36,13 +36,13 @@ const API_URL = "http://localhost:3001/article"
 // Hent alle articler (READ)
 export async function getArticles(): Promise<Nyheder[]> {
   const res = await fetch(API_URL);
-  if (!res.ok) throw new Error("Failed to fetch treatments");
+  if (!res.ok) throw new Error("Failed to fetch articles");
   return res.json();
 }
 
-// Hent alle articler (READ)
+// Hent landingpage articler (READ)
 export async function getIsLandinPage(): Promise<Nyheder[]> {
   const res = await fetch(`${API_URL}/landingpage`);
-  if (!res.ok) throw new Error("Failed to fetch treatments");
+  if (!res.ok) throw new Error("Failed to fetch landingpage articles");
   return res.json();
 }

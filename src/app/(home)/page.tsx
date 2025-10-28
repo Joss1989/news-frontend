@@ -2,6 +2,7 @@ import Article1 from "@/components/Article1";
 import Article2 from "@/components/Article2";
 import Article3 from "@/components/Article3";
 import Article4 from "@/components/Article4";
+import Podcast from "@/components/Podcast";
 import VideoArticle1 from "@/components/VideoArticle1";
 import VideoArticle2 from "@/components/VideoArticle2";
 import { getIsLandinPage, Nyheder } from "@/data/articleData";
@@ -22,6 +23,7 @@ const Home = async () => {
       <Article4 />
       <VideoArticle1 items={landingVideo.slice(0, 3)} />
       <VideoArticle2 item={landingVideo[3]}/>
+      <Podcast />
     </main>
   );
 };

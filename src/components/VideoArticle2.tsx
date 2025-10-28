@@ -5,7 +5,7 @@ interface VideoProps {
 }
 const VideoArticle2 = ({ item }: VideoProps) => {
   return (
-    <section className="col-span-2 h-full">
+    <section className="col-span-4 md:col-span-2 h-full">
       <video controls className="w-full">
         <source
           src={`http://localhost:3001/assets/video/${item.url}`}
