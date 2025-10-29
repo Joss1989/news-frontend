@@ -46,3 +46,11 @@ export async function getIsLandinPage(): Promise<Nyheder[]> {
   if (!res.ok) throw new Error("Failed to fetch landingpage articles");
   return res.json();
 }
+
+export async function articleBySLug(articleSLug: string): Promise<Nyheder> {
+  const res = await fetch(`${API_URL}/slug/${articleSLug}`); // Hent en articles ud fra slug
+  if (!res.ok) throw new Error("Failed to fetch articlesBySLug");
+  return res.json();
+}
+
+

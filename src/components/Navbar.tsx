@@ -12,14 +12,14 @@ const Navbar = () => {
   }
 
   const menuItems = [
-    {label: "Nyheder", href: ""},
+    {label: "Nyheder", href: "/nyheder"},
     {label: "Sport", href: ""},
     {label: "Vejr", href: ""},
     {label: "Podcast", href: ""},
   ]
 
   return (
-    <header className="w-full bg-black items-center md:flex z-50 h-20">
+    <header className="w-full bg-black items-center flex md:flex z-50 h-20">
       <nav className="flex justify-between items-center w-full px-5 text-white">
         <h1 className="text-4xl">
           <Link
@@ -68,8 +68,7 @@ const Navbar = () => {
       
       {/* Viser mobilmenuen kun når `isOpen` er tru */}
       {isOpen && ( 
-        <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center space-y-6">
-          {" "}
+        <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white z-50 flex flex-col justify-center space-y-6 text-left px-10">
           {/* Fullscreen overlay-menu */}
           <button
             onClick={toggleMenu} // Lukker menuen ved klik på krydset
