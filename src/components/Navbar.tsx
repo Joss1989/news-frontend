@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -11,17 +12,19 @@ const Navbar = () => {
     setIsOpen(!isOpen)// Skifter state til modsat værdi (toggle)
   }
 
+  const pathname = usePathname()
+
   const menuItems = [
     {label: "Nyheder", href: "/nyheder"},
     {label: "Sport", href: ""},
     {label: "Vejr", href: ""},
-    {label: "Podcast", href: ""},
+    {label: "Podcast", href: "/podcast"},
   ]
 
   return (
     <header className="w-full bg-black items-center flex md:flex z-50 h-20">
       <nav className="flex justify-between items-center w-full px-5 text-white">
-        <h1 className="text-4xl">
+        <h1 className="text-4xl pr-15">
           <Link
             href="/"
           >
@@ -37,7 +40,12 @@ const Navbar = () => {
                 {/* Unik key (krav fra React) */}
                 <Link
                   href={item.href} // Link til side eller sektion
-                  className="uppercase text-xl hover:bg-[rgba(255,255,255,0.1)]" // Styling og hover-effekt
+                  className={`uppercase text-sm font-medium px-3 py-8 
+                  ${
+                    pathname === item.href
+                      ? "bg-[rgba(255,255,255,0.1)]"
+                      : "hover:bg-[rgba(255,255,255,0.1)]"
+                  }`} // Styling og hover-effekt
                 >
                   {item.label} {/* Tekst der vises (fx “Home”) */}
                 </Link>
@@ -46,12 +54,7 @@ const Navbar = () => {
           )}
         </ul>
 
-        <Link
-          href="/login"
-          className="hidden md:block text-3xl"
-        >
-          Login
-        </Link>
+        <input className="bg-white text-[#999999] rounded-md pl-2 hidden md:block" type="text" placeholder="Søg på News"/>
         {/* Container til mobilmenu-knappen (kun synlig på små skærme) */}
         <div className="md:hidden ml-auto">
           <button onClick={toggleMenu} aria-label="Toggle menu">

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-black text-white text-sm">
-      <section className="max-w-[1000px] mx-auto grid grid-cols-4 gap-8 py-10 justify-items-center">
+      <section className="max-w-[1000px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 py-10 px-5">
         <section>
           <h3 className="font-bold mb-2">Nyheder</h3>
           <ul className="space-y-1 text-gray-300">
@@ -28,7 +28,7 @@ const Footer = () => {
           </p>
         </section>
 
-        <section>
+        <section className="md:ml-auto md:order-4 -order-1">
           <h3 className="font-bold mb-2">Om NEWS</h3>
           <ul className="space-y-1 text-gray-300">
             <li>Nyt fra NEWS</li>
@@ -41,7 +41,7 @@ const Footer = () => {
         </section>
       </section>
 
-      <section className="border-t border-gray-700">
+      <section className="border-t border-gray-700 px-5">
         <div className="max-w-[1000px] mx-auto py-4 text-center text-gray-400 text-xs">
           Lorem ipsum dolor sit amet, consecteturindolore ultrices | TLF: 12 34 56 78
         </div>

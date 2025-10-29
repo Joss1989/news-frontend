@@ -23,7 +23,7 @@ const VideoArticle1 = ({ items }: VideoProps) => {
                   <strong>{item.title}</strong>
                 </h3>
                 <p className="leading-5">{item.description}</p>
-                <p className="text-[#e89700] capitalize mb-2">Nyheder <span className="text-[#999999]">| {new Date(item.duration).getMinutes()} minutter</span></p>
+                <p className="text-[#e89700] capitalize mb-2 mt-auto">Nyheder <span className="text-[#999999]">| {new Date(item.duration).getMinutes()} minutter</span></p>
               </div>
           </article>
         ))}

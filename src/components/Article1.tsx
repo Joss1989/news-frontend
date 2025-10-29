@@ -12,7 +12,7 @@ const Article1 = ({ item }: ArticleProps) => {
         <h2>{item.title}</h2>
         <p className="text-[#e89700] capitalize mb-2">{item.articleCategory} <span className="text-[#999999]">| {new Date(item.date).getMinutes()} minutter</span></p>
       </section>
-      <Link className="col-span-2" href={`/${item.articleCategory}/${item.slug}`}>
+      <Link className="col-span-4 md:col-span-2" href={`/${item.articleCategory}/${item.slug}`}>
         <article className="col-span-4 md:col-span-2 flex flex-col h-full">
           <figure className="flex h-full">
             <img

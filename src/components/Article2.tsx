@@ -14,12 +14,12 @@ const Article2 = ({ items }: ArticleProps) => {
             key={item._id}
             className="grid md:grid-cols-2 gap-x-2 h-full"
           >
-            <div className="flex md:flex-col flex-col-reverse order-1 md:-order-1">
+            <div className="flex flex-col order-1 md:-order-1">
               <h3>
                 <strong>{item.title} </strong>
               </h3>
               <p className="leading-5">{item.content[0].text}</p>
-              <p className="text-[#e89700] capitalize mb-2 mt-auto">
+              <p className="text-[#e89700] capitalize mt-auto -order-1">
                 {item.articleCategory}{" "}
                 <span className="text-[#999999]">
                   | {new Date(item.date).getMinutes()} minutter

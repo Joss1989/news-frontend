@@ -3,6 +3,7 @@
 import { getPodcast, Podcast } from "@/data/podcastData";
 import { useEffect, useState } from "react";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import PodcastCard from "./PodcastCard";
 
 const PodcastSlider = () => {
   const [podcast, setPodcast] = useState<Podcast[]>([])
@@ -32,34 +33,17 @@ const PodcastSlider = () => {
       </section>
       <section className="col-span-4">
         <section className="overflow-x-hidden">
-          <ol className="flex gap-x-5 transition-transform duration-1000 ease-in-out h-[200px]" style={{ transform: `translateX(-${currentIndex  * 450 }px)` }}>
-            {podcast.map((items) => (
-              <li key={items._id} className="bg-white border p-6 flex gap-x-5 min-w-[600px] ">
-                <img
-                  src={`http://localhost:3001/assets/podcast/${items.thumbnail}`}
-                  alt={items.headline}
-                  
-                />
-                <section className="flex flex-col">
-                  <h3><strong>{items.headline}</strong></h3>
-                  <p>{items.info}</p>
-                  <p>{items.length} <span>minutter</span></p>
-                  <audio controls className="mt-auto">
-                    <source
-                      src={`http://localhost:3001/assets/podcast/${items.podcast}`}
-                      type="audio/mp3"
-                    />
-                  </audio>
-                </section>
-              </li>
+          <ol className="grid grid-flow-col auto-cols-[550px] gap-x-5 transition-transform duration-1000 ease-in-out " style={{ transform: `translateX(-${currentIndex  * 39 }%)` }}>
+            {podcast.map((item) => (
+              <PodcastCard key={item._id} podcast={item} />
             ))}
           </ol>
         </section>
-        <section className="text-2xl flex items-center w-full justify-center gap-x-5 mt-4">
-          <button type="button" onClick={handlePrev}>
+        <section className="text-3xl flex items-center w-full justify-center gap-x-5 mt-4">
+          <button className="cursor-pointer" type="button" onClick={handlePrev}>
             <IoIosArrowDropleft />
           </button>
-          <button type="button" onClick={handleNext}>
+          <button className="cursor-pointer" type="button" onClick={handleNext}>
             <IoIosArrowDropright />
           </button>
         </section>

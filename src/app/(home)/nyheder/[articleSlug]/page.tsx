@@ -19,7 +19,11 @@ const ArticleSlug = async ({ params }: ArticleSlugProps) => {
       <section className="col-span-4">
         <h2>{article.title}</h2>
         <p className="text-[#e89700] capitalize">
-          {article.articleCategory}<span className="text-[#999999]"> | {new Date(article.date).getMinutes()} minutter</span>
+          {article.articleCategory}
+          <span className="text-[#999999]">
+            {" "}
+            | {new Date(article.date).getMinutes()} minutter
+          </span>
         </p>
         <p>{article.content[1].contentbody[0].headline}</p>
       </section>
@@ -33,7 +37,11 @@ const ArticleSlug = async ({ params }: ArticleSlugProps) => {
         </figure>
         {article.content[1].contentbody.map((item, index) => (
           <section key={index}>
-            {item.headline && <h3><strong>{item.headline}</strong></h3>}
+            {item.headline && (
+              <h3>
+                <strong>{item.headline}</strong>
+              </h3>
+            )}
             <p>{item.text}</p>
           </section>
         ))}
