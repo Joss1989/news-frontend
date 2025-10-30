@@ -15,7 +15,6 @@ export const useYupForm = () => {
   const {
     register, // register bruges til at registrere inputfelter i formularen.
     handleSubmit, // handleSubmit håndterer formularens indsendelse og validering.
-    setValue, // setValue bruges til at opdatere et inputfelt med et bestemt værdi programmatisk.
     reset, // reset bruges til at nulstille formularen (for eksempel efter en succesfuld indsendelse).
     formState: { errors }, // Henter eventuelle fejl, som måtte opstå under validering.
   } = useForm({
