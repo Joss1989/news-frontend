@@ -16,8 +16,8 @@ const Navbar = () => {
 
   const menuItems = [
     {label: "Nyheder", href: "/nyheder"},
-    {label: "Sport", href: ""},
-    {label: "Vejr", href: ""},
+    {label: "Sport", href: "/sports"},
+    {label: "Vejr", href: "/vejret"},
     {label: "Podcast", href: "/podcast"},
   ]
 

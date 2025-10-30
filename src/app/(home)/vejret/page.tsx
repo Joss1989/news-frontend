@@ -1,7 +1,10 @@
+import Vejr from "@/components/Vejr"
 
 const page = () => {
   return (
-    <div>Vejret</div>
+    <>
+      <Vejr />
+    </>
   )
 }
 
