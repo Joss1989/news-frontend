@@ -1,31 +1,14 @@
 "use client";
 
-// import { logout } from "@/data/LoginData";
-// import { logout } from "@/data/LoginData";
-// Importerer funktionen 'logout' — den håndterer sandsynligvis fjernelse af session/cookie/token
 import Link from "next/link";
-// Importerer Next.js' 'Link' komponent, som bruges til intern navigation uden sideopfriskning
-// import { useRouter } from "next/navigation";
-// Importerer 'useRouter' hook fra Next.js — giver adgang til navigation (fx router.push())
 
 const menuItems = [
   // En liste over menupunkter i adminpanelet
-  { href: "/admin/dashboard/article", label: "Article" },
   { href: "/admin/dashboard/podcast", label: "Podcast" },
-  { href: "/admin/dashboard/contact", label: "Contact" },
 ];
 
 const AdminSidebar = () => {
-  // const router = useRouter();
-  // useRouter giver mulighed for at navigere programmatisk (fx efter logout)
-
-  // Funktion der håndterer logout
-  // const handleLogout = async () => {
-  //   await logout(); // Kalder logout-funktionen (fx fjerner login-token eller session)
-  //   router.push("/"); // Sender brugeren tilbage til forsiden efter logout
-  // };
-
-  // ---------- JSX (RETURN) ----------
+ 
   return (
     <div className="w-64 bg-neutral-400 text-white p-4 h-screen fixed">
       {/* Overskrift/link til hoved-dashboardet */}
@@ -62,16 +45,6 @@ const AdminSidebar = () => {
             </Link>
           </li>
         ))}
-
-        {/* Logout-knap nederst */}
-        {/* <li>
-          <button
-            onClick={handleLogout} // Kalder handleLogout ved klik
-            className="bg-neutral-200 text-neutral-950 cursor-pointer p-2 block rounded w-full text-center font-black"
-          >
-            Logout
-          </button>
-        </li> */}
       </ul>
     </div>
   );

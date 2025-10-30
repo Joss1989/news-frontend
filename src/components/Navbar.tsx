@@ -37,7 +37,6 @@ const Navbar = () => {
           {menuItems.map((item,index // Gennemløber alle menuItems og laver et listeelement pr. punkt
             ) => (
               <li key={index}>
-                {/* Unik key (krav fra React) */}
                 <Link
                   href={item.href} // Link til side eller sektion
                   className={`uppercase text-sm font-medium px-3 py-8 
@@ -47,7 +46,7 @@ const Navbar = () => {
                       : "hover:bg-[rgba(255,255,255,0.1)]"
                   }`} // Styling og hover-effekt
                 >
-                  {item.label} {/* Tekst der vises (fx “Home”) */}
+                  {item.label} 
                 </Link>
               </li>
             )
