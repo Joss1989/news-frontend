@@ -47,6 +47,38 @@ export async function getIsLandinPage(): Promise<Nyheder[]> {
   return res.json();
 }
 
+export async function addArticle(data: FormData): Promise<Nyheder[]> {
+  const res = await fetch(`${API_URL}/add`, {
+    method: "POST",
+    body: data, // Send FormData direkte
+  });
+
+  if (!res.ok) throw new Error("Failed to create article");
+  return res.json();
+}
+
+// Opdater eksisterende article (UPDATE)
+// Opdateret til at understøtte FormData
+export async function updateArticle(id: string, data: FormData): Promise<Nyheder> {
+  const res = await fetch(`${API_URL}/update/${id}`, {
+    method: "PUT",
+    body: data, // Send FormData direkte
+  });
+
+  if (!res.ok) throw new Error("Failed to update article");
+  return res.json();
+}
+
+// Slet article (DELETE)
+export async function deleteArticle(id: string): Promise<{ message: string }> {
+  const res = await fetch(`${API_URL}/delete/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!res.ok) throw new Error("Failed to delete article");
+  return res.json();
+}
+
 export async function articleBySLug(articleSLug: string): Promise<Nyheder> {
   const res = await fetch(`${API_URL}/slug/${articleSLug}`); // Hent en articles ud fra slug
   if (!res.ok) throw new Error("Failed to fetch articlesBySLug");

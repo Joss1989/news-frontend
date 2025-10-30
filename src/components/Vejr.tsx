@@ -2,6 +2,7 @@ import { getWeather } from "@/data/weatherData";
 import { WiDaySunny } from "react-icons/wi";
 
 const Vejr = async () => {
+  
   const weather = await getWeather();
 
   const forecast = [
@@ -14,9 +15,8 @@ const Vejr = async () => {
   ];
 
   return (
-    <section className="col-span-4 bg-[#00bae8] text-white px-5  ">
-      <section>
-        <section className="grid grid-cols-4">
+    <section className="col-span-4 gap-x-2 text-white px-5  ">
+        <section className="grid grid-cols-4 gap-2 bg-[#00bae8]">
           <section className="flex flex-col">
             <div className="flex justify-between items-baseline">
               <h2 className="text-2xl font-bold">{weather.name}</h2>
@@ -28,12 +28,12 @@ const Vejr = async () => {
             </div>
           </section>
             <section className="flex flex-col">
-              <p className="text-9xl"><WiDaySunny /></p>
+              <p className="text-[13rem] m-auto"><WiDaySunny /></p>
               <section className="flex justify-between  mt-auto">
-                <p>Morgen 8°</p>
-                <p>Middag 12°</p>
-                <p>Aften 10°</p>
-                <p>Nat 5°</p>
+                <p className="text-center">Morgen 8°</p>
+                <p className="text-center">Middag 12°</p>
+                <p className="text-center">Aften 10°</p>
+                <p className="text-center">Nat 5°</p>
               </section>
             </section>
           <section>
@@ -49,10 +49,6 @@ const Vejr = async () => {
           ))}
         </section>
         </section>
-
-        {/* Morning, Midday, Evening, Night */}
-
-        {/* Info blocks grid */}
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-[#00aae8] rounded-lg p-4 font-bold flex flex-col">
             <span>Vind</span>
@@ -73,10 +69,6 @@ const Vejr = async () => {
             <span className="text-2xl">0.5</span>
           </div>
         </div>
-
-        {/* Right side forecast */}
-        
-      </section>
     </section>
   );
 };
