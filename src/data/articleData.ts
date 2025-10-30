@@ -85,4 +85,9 @@ export async function articleBySLug(articleSLug: string): Promise<Nyheder> {
   return res.json();
 }
 
+export async function getWeatherArticles(): Promise<Nyheder[]> {
+  const res = await fetch(`${API_URL}/section/vejr`);
+  if (!res.ok) throw new Error("Failed to fetch weather");
+  return res.json();
+}
 

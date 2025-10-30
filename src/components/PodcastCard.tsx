@@ -1,4 +1,5 @@
 import { Podcast } from "@/data/podcastData";
+
 interface PodcastCardProps {
   podcast: Podcast;
 }
