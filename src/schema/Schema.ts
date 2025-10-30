@@ -6,7 +6,7 @@ const schema = yup.object().shape({
     name: yup.string().required("name er påkrævet"),
     email: yup.string().required("email er påkrævet"),
     subject: yup.string().required(""),
-    message: yup.string().required("message er påkrævet").min(10, "Beskrivelsen skal være mindst 10 tegn lang"),
+    message: yup.string().required("message er påkrævet"),
 });
 
 export const useYupForm = () => {

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -20,7 +20,11 @@ const Footer = () => {
               <Link href="/vejret">Vejret</Link>
             </li>
             <li>
-              <button className="cursor-pointer" onClick={() => setIsopen(true)} type="button">
+              <button
+                className="cursor-pointer"
+                onClick={() => setIsopen(true)}
+                type="button"
+              >
                 Kontakt
               </button>
             </li>
@@ -63,10 +67,7 @@ const Footer = () => {
         </div>
       </section>
 
-       <ContactFormModal
-        open={isopen}
-        onClose={() => setIsopen(false)}
-      />
+      <ContactFormModal open={isopen} onClose={() => setIsopen(false)} />
     </footer>
   );
 };
